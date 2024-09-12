@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { TextField, Button, Box, Typography } from '@mui/material';
-import QRCode from 'qrcode.react';
+import { QRCodeCanvas } from 'qrcode.react'; // Use QRCodeCanvas
 
 const GenerateQRCode = () => {
     const [productName, setProductName] = useState('');
@@ -43,7 +43,7 @@ const GenerateQRCode = () => {
             {qrCodeValue && (
                 <Box mt={4}>
                     <Typography variant="h6">QR Code for {productName}</Typography>
-                    <QRCode value={qrCodeValue} />
+                    <QRCodeCanvas value={qrCodeValue} /> {/* Use QRCodeCanvas here */}
                 </Box>
             )}
         </Box>

@@ -8,9 +8,9 @@ app.use(cors());
 app.use(express.json());
 
 // MongoDB connection
-mongoose.connect('mongodb://localhost/qrcheckout');
+mongoose.connect('mongodb+srv://praabindhp:cKduzNatGMMUdJbL@nodedb-cluster.bomq77w.mongodb.net/?retryWrites=true&w=majority&appName=nodedb-cluster/qr-reckoner');
 
 // API routes
 app.use('/api', productRoutes);
 
-app.listen(5000, () => console.log('Server running on port 5000'));
+app.listen(8080, () => console.log('Server running on port 8080'));
